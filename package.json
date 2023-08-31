@@ -2,6 +2,7 @@
   "name": "rtk",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://noothanpanthayi.github.io/dashboard",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.17.0",
@@ -26,7 +27,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "serve-json": "json-server --watch db.json",
-    "json-gql-server": "json-graphql-server db.js --p 4000"
+    "json-gql-server": "json-graphql-server db.js --p 4000",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
