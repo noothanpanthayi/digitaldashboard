@@ -1,0 +1,44 @@
+.grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr))
+}
+.card {
+    position: relative;
+    border:solid 1px silver;
+    border-radius: 6px;
+    margin:3px;
+    height:200px;
+}
+
+.header {
+    color:#fff;
+    background-color:steelblue;
+    padding:3px;
+    text-align: center;
+}
+
+.footer {
+    position:absolute; 
+    bottom:0;
+    color:#fff;
+    background-color:gray;
+    padding:3px;
+    width:-webkit-fill-available;
+    text-align: center;
+    background-color: green;
+}
+
+.card button {
+    background:orange;
+    border:none;
+    color:#000;
+    padding:3px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.price {
+    color:blue;
+    text-align: center;
+    font-weight: bold;
+}

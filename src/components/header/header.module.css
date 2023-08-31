@@ -1,0 +1,23 @@
+header {
+  background-color: green;
+  color: #fff;
+  padding: 5px;
+  text-align: left;
+}
+
+nav {
+  max-width: 1024px;
+  display: flex;
+  margin: 0 auto;
+}
+
+nav a:link,
+nav a:visited  {
+  color: #fff;
+  margin: 0 5px;
+  padding-bottom: 2px;
+  text-decoration: none;
+}
+
+
+
