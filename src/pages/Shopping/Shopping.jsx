@@ -60,7 +60,6 @@ const Shopping = () => {
   }
   return (
     <>
-      <div>Shopping</div>
       <Grid />
     </>
   )

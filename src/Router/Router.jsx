@@ -12,7 +12,6 @@ const AppRouter = () => {
       <Route exact path="/dashboard" element={<Home />}></Route>
       <Route exact path="/shopping" element={<Shopping />}></Route>
       <Route exact path="/cart" element={<ShoppingCart />}></Route>
-
     </Routes>
     </div>
   )

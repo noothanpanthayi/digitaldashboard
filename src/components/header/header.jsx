@@ -14,7 +14,6 @@ const Header = () => {
           <NavLink exact="true" to="/dashboard" activeclassname="active">Home</NavLink>
           <NavLink to="/shopping" exact="true" activeclassname="active">Shopping</NavLink>
           <NavLink to="/cart" exact="true" activeclassname="active">Cart<span className={styles.bold}>({cartlist.length})</span></NavLink>
-
       </nav>
     </header>
   )
