@@ -1,6 +1,4 @@
 import React from 'react';
-// import { useGetProductsQuery } from '../../redux/api/productsapi';
-
 const Home = () => {
 
 
