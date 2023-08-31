@@ -1,18 +1,11 @@
 import React, { Fragment, useEffect, useState } from 'react'
 import useFetch from '../../hooks/usefetch'
 import styles from './shopping.module.css'
-import { useDispatch, useSelector } from "react-redux";
-import { setCartList } from '../../redux/slices/cartlist';
-
+import { useDispatch, useSelector } from 'react-redux'
+import { setCartList } from '../../redux/slices/cartlist'
 
 const Shopping = () => {
-
-  const dispatch=useDispatch();
-
-
-
-  // console.log('cartList consumed ', cartlist);
-
+  const dispatch = useDispatch()
 
   const { data, loading, error, errorMsg } = useFetch(
     'https://dummyjson.com/products',
@@ -21,7 +14,6 @@ const Shopping = () => {
   const [state, setState] = useState({
     cart: [],
   })
-
 
   const addToCart = (item) => {
     const tempState = { ...state }
@@ -32,12 +24,8 @@ const Shopping = () => {
       }
     })
 
-    dispatch(setCartList(item));
+    dispatch(setCartList(item))
   }
-
-  // useEffect(() => {
-  //   console.log('State ', state)
-  // })
 
   const Grid = () => {
     return (
@@ -52,7 +40,11 @@ const Shopping = () => {
                     {item.title.length > 15 && '...'}
                   </div>
                   <div>
-                    <img className={styles.image} alt="products" src={item.images[0]} />
+                    <img
+                      className={styles.image}
+                      alt="products"
+                      src={item.images[0]}
+                    />
                   </div>
                   <div className={styles.price}>Price:{item.price}</div>
                   <div className={styles.footer}>

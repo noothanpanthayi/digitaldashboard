@@ -7,15 +7,16 @@ export const cartListSlice = createSlice({
   },
   reducers: {
     setCartList: (state, action) => {
-
-      // state.cartList=[...state.cartList,action.payload]
-      // console.log('payload ', action.payload);
-      
       state.cartlist.push(action.payload)
-      // console.log('state.cartlist ', state.cartList)
-
     },
+    removeItem:(state,action)=>{
+    const updatedList=state.cartlist.filter(row=>{
+      return row.id!==parseInt(action.payload)
+     })
+     state.cartlist=[...updatedList]
+    //  state.cartlist.splice(parseInt(action.payload),1)
+    }
   },
 })
 
-export const {setCartList}=cartListSlice.actions;
+export const {setCartList, removeItem}=cartListSlice.actions;

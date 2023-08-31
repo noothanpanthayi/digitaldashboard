@@ -19,5 +19,8 @@ nav a:visited  {
   text-decoration: none;
 }
 
+.bold {
+  font-weight: bold;
+}
 
 
