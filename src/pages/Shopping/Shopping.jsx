@@ -1,35 +1,23 @@
 import React, { Fragment, useEffect, useState } from 'react'
-import useFetch from '../../hooks/usefetch'
 import styles from './shopping.module.css'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { setCartList } from '../../redux/slices/cartlist'
+import { useGetProductsQuery } from '../../redux/api/productsapi';
 
 const Shopping = () => {
   const dispatch = useDispatch()
 
-  const { data, loading, error, errorMsg } = useFetch(
-    'https://dummyjson.com/products',
-  )
-
-  const [state, setState] = useState({
-    cart: [],
-  })
+const {data, loading, error} =useGetProductsQuery();
 
   const addToCart = (item) => {
-    const tempState = { ...state }
-    tempState.cart = [...tempState.cart, item]
-    setState((prevState) => {
-      return {
-        cart: tempState.cart,
-      }
-    })
-
     dispatch(setCartList(item))
   }
 
   const Grid = () => {
     return (
       <>
+      {error&&<div>error</div>}
+      {loading&&<div>Loading...</div>}
         <div className={styles.grid}>
           {data?.products?.map((item) => {
             return (
