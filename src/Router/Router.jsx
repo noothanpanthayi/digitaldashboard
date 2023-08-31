@@ -9,7 +9,7 @@ const AppRouter = () => {
   return (
     <div className={styles.container}>
     <Routes>
-      <Route exact path="/" element={<Home />}></Route>
+      <Route exact path="/dashboard" element={<Home />}></Route>
       <Route exact path="/shopping" element={<Shopping />}></Route>
       <Route exact path="/cart" element={<ShoppingCart />}></Route>
 
