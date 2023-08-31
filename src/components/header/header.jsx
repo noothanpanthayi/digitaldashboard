@@ -10,6 +10,8 @@ const Header = () => {
         <nav>
           <NavLink exact="true" to="/" activeclassname="active">Home</NavLink>
           <NavLink to="/shopping" exact="true" activeclassname="active">Shopping</NavLink>
+          <NavLink to="/cart" exact="true" activeclassname="active">Cart</NavLink>
+
       </nav>
     </header>
   )

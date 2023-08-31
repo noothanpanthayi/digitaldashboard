@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from '../pages/Home/Home'
 import Shopping from '../pages/Shopping/Shopping';
 import styles from './router.module.css'
+import ShoppingCart from '../pages/cart/ShoppingCart';
 
 const AppRouter = () => {
   return (
@@ -10,6 +11,8 @@ const AppRouter = () => {
     <Routes>
       <Route exact path="/" element={<Home />}></Route>
       <Route exact path="/shopping" element={<Shopping />}></Route>
+      <Route exact path="/cart" element={<ShoppingCart />}></Route>
+
     </Routes>
     </div>
   )

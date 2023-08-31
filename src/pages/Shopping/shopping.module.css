@@ -37,6 +37,11 @@
     cursor: pointer;
 }
 
+.image {
+    max-height:120px;
+    max-width:-webkit-fill-available;
+}
+
 .price {
     color:blue;
     text-align: center;
